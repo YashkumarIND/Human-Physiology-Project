@@ -1,0 +1,69 @@
+<html>
+<head>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.8.10/tailwind.min.css" rel="stylesheet">
+
+</head>
+<body>
+        <div class="container w-full mx-20 mt-3 px-20 py-2 font-sans">
+            <div class="bg-gray-100 bg-white shadow-md rounded-lg px-20 pt-6 pb-2 mb-4 mx-20">
+
+            <div class="bg-white shadow-lg rounded-lg mx-20 px-8 pt-6 " style="width:600px;">
+                <center><h1 class="title text-3xl mb-8 mx-auto text-center font-bold text-black-700">Prediction Report</h1></center>
+            <h3 class="title text-xl mb-8 mx-auto text-left font-bold text-black-600">1. Diabetes Prediction</h3>
+            <h6 class="title text-md mb-2 mx-auto text-left font-bold text-black-600">Details</h6>
+                <div class="text-left">
+                <h4>Pregnancies: {{diseasesData['Diabetes']['details']['pregnancies']}}</h4>
+                <h4>Glucose: {{diseasesData['Diabetes']['details']['glucose']}}</h4>
+                <h4>Blood Pressure: {{diseasesData['Diabetes']['details']['blood_pressure']}}</h4>
+                <h4>Skin Thickness: {{diseasesData['Diabetes']['details']['skin_thickness']}}</h4>
+                <h4>Insulin: {{diseasesData['Diabetes']['details']['insulin']}}</h4>
+                <h4>BMI: {{diseasesData['Diabetes']['details']['bmi']}}</h4>
+                <h4>Diabetes Pedigree Function: {{diseasesData['Diabetes']['details']['dpf']}}</h4>
+                <h4>Age: {{diseasesData['Diabetes']['details']['age']}}</h4>
+                <br>
+                <center><h4 class="font-bold text-black-400">Diabetes Prediction: {{ testing["Diabetes"] }}</h4></center>
+            </div>
+            <br>
+            <h3 class="title text-xl mb-8 mx-auto text-left font-bold text-black-600">2. Heart Disease Prediction</h3>
+            <h6 class="title text-md mb-2 mx-auto text-left font-bold text-black-600">Details</h6>
+            <div class="text-left">
+                <h4>Age: {{diseasesData['Heart_Disease']['details']['age']}}</h4>
+                <h4>Gender: {{diseasesData['Heart_Disease']['details']['gender']}}</h4>
+                <h4>Angina: {{diseasesData['Heart_Disease']['details']['angina']}}</h4>
+                <h4>Blood Pressure: {{diseasesData['Heart_Disease']['details']['blood_pressure']}}</h4>
+                <h4>Cholesterol: {{diseasesData['Heart_Disease']['details']['cholesterol']}}</h4>
+                <h4>Blood Sugar: {{diseasesData['Heart_Disease']['details']['blood_sugar']}}</h4>
+                <h4>Electrocardiography: {{diseasesData['Heart_Disease']['details']['electrocardiography']}}</h4>
+                <h4>Heart Rate: {{diseasesData['Heart_Disease']['details']['heart_rate']}}</h4>
+                <h4>Old Peak: {{diseasesData['Heart_Disease']['details']['old_peak']}}</h4>
+                <h4>Slope: {{diseasesData['Heart_Disease']['details']['slope']}}</h4>
+                <br>
+                <center><h4 class="font-bold text-black-400">Heart Attack Prediction: {{ testing["Heart_Disease"] }}</h4></center>
+
+            </div>
+
+            <br>
+            <h3 class="title text-xl mb-8 text-left font-bold text-black-600">3. Stroke Prediction</h3>
+            <h6 class="title text-md mb-2 text-left font-bold text-black-600">Details</h6>
+            <div class="text-left">
+                <h4>Gender: {{diseasesData['Stroke']['details']['gender']}}</h4>
+                <h4>Age: {{diseasesData['Stroke']['details']['age']}}</h4>
+                <h4>Hypertension: {{diseasesData['Stroke']['details']['hypertension']}}</h4>
+                <h4>Heart Disease: {{diseasesData['Stroke']['details']['heart_disease']}}</h4>
+                <h4>Marriage Status: {{diseasesData['Stroke']['details']['ever_married']}}</h4>
+                <h4>Work Type: {{diseasesData['Stroke']['details']['work_type']}}</h4>
+                <h4>Smoking Status: {{diseasesData['Stroke']['details']['smoking_status']}}</h4>
+                <br>
+                <center><h4 class="font-bold text-black-400">Stroke Prediction: {{ testing["Stroke"] }}</h4></center>
+            </div>
+            <br>
+        </div>
+
+        </div>
+
+        </div>
+
+
+</body>
+</html>

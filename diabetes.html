@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Disease & Diagnosis Predictor</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.8.10/tailwind.min.css" rel="stylesheet">
+
+  </head>
+  <body class="bg-purple-200">
+  <div class="container w-full mx-auto mt-8 px-6 font-sans" style="width:600px;">
+    <form id="contactForm" method="post" action="{{ url_for('receive_diabetes_data') }}" data-sb-form-api-token="API_TOKEN" class="bg-white shadow-md rounded-lg px-8 pt-6 pb-8 mb-4">
+      <h3 class="title text-xl mb-8 mx-auto text-left font-bold text-purple-700">Diabetes Predictor</h3>
+      <div class="mb-4">
+          <div class="col-span-6 sm:col-span-3">
+            <label for="Pregnancies" class="block text-gray-500 font-medium text-sm mb-2">Pregnancies</label>
+            <input type="number" name="Pregnancies" id="Pregnancies" placeholder="Enter number of Pregnancies" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" />
+        </div>
+          <div class="col-span-6 sm:col-span-3">
+            <label for="Glucose" class="block text-gray-500 font-medium text-sm mb-2">Glucose</label>
+            <input type="number" name="Glucose" id="Glucose" placeholder="Enter Glucose" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" />
+        </div>
+          <div class="col-span-6 sm:col-span-3">
+            <label for="BloodPressure" class="block text-gray-500 font-medium text-sm mb-2">BloodPressure</label>
+            <input type="number" name="BloodPressure" id="BloodPressure" placeholder="Enter Your BloodPressure" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" />
+        </div>
+          <div class="col-span-6 sm:col-span-3">
+            <label for="SkinThickness" class="block text-gray-500 font-medium text-sm mb-2">SkinThickness</label>
+            <input type="number" name="SkinThickness" id="SkinThickness" placeholder="Enter Your SkinThickness" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" />
+        </div>
+      <div class="grid grid-cols-6 gap-6">
+       <div class="col-span-6 sm:col-span-3">
+            <label for="Insulin" class="block text-gray-500 font-medium text-sm mb-2">Insulin</label>
+            <input type="number" name="Insulin" id="Insulin" placeholder="Enter Your Insulin" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" />
+        </div>
+          <div class="col-span-6 sm:col-span-3">
+            <label for="BMI" class="block text-gray-500 font-medium text-sm mb-2">Body Mass Index (BMI)</label>
+            <input type="number" step="0.01" name="BMI" id="BMI" placeholder="0"
+              class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" />
+          </div>
+          <div class="col-span-6 sm:col-span-3">
+            <label for="DPF" class="block text-gray-500 font-medium text-sm mb-2">Diabetes Pedigree Function</label>
+            <input type="number" step="0.001" name="DPF" id="DPF" placeholder="0"
+              class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" />
+          </div>
+          <div class="col-span-6 sm:col-span-3">
+            <label for="Age" class="block text-gray-500 font-medium text-sm mb-2">Age</label>
+            <input type="number" name="Age" id="Age" placeholder="Enter Your Age" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" />
+        </div>
+
+      </div>
+       <div class="flex items-center justify-between">
+          <button class="shadow bg-purple-500 hover:bg-purple-600 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded mt-4" type="submit">
+            Predict
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
