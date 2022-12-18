@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Disease & Diagnosis Predictor</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.8.10/tailwind.min.css" rel="stylesheet">
+  </head>
+  <body class="bg-purple-200">
+      <div class="col-span-2">
+        <div class="container w-full mx-auto mt-8 px-6 font-sans" style="width:600px;">
+            <form id="contact_tumor_Form" method="post" enctype="multipart/form-data" action="{{ url_for('predict_tumor') }}" data-sb-form-api-token="API_TOKEN" class="bg-white shadow-md rounded-lg px-10 pt-6 pb-8 mb-4">
+              <h3 class="title text-xl mb-8 mx-auto text-left font-bold text-purple-700">Tumor Detection</h3>
+              <div class="col-span-6 sm:col-span-3">
+                <label class="block text-gray-500 font-medium text-sm mb-2">Please upload your Brain  MRI Scan Image, so to detect for Tumor</label>
+                <input name="tumor_image" id="tumor_image" class="" type="file" accept="image/*" />
+             </div>
+              <button name="predict_tumor" id="predict_image" class="shadow bg-purple-500 hover:bg-purple-600 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded mt-4" type="submit">Predict
+              </button>
+            </form>
+          </div>
+
+      </div>
+</body>
+</html>
